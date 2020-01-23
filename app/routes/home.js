@@ -5,7 +5,7 @@ module.exports = function(app){
         //var connection = db();
         var connection = app.config.dbConnection();
         connection.query("SELECT * FROM conteudo ", function(error, result){
-            res.render('secao/frontend', {dados:result});
+            res.render('home/index', {dados:result});
         })
     })
 }

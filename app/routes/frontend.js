@@ -8,4 +8,13 @@ module.exports = function(app){
             res.render('secao/frontend', {dados:result});
         })
     })
+    app.post('/frontend/salvar', function(req,res){
+        var dados = req.body;
+        var connection = app.config.dbConnection()
+        connection.query('INSERT INTO conteudo SET ?', dados, function(error,
+        result){
+        
+        res.redirect('/frontend');
+        });
+    });
 }
