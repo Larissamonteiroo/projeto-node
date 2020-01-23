@@ -20,7 +20,6 @@ CREATE TABLE `conteudo` (
 --
 
 INSERT INTO `conteudo` (`nome`, `modulo`) VALUES
-('tecnologia', 'parte'),
 ('tecnologia', 'parte');
 
 --
